@@ -31,6 +31,9 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.black,
       body: ListView.builder(itemBuilder: (_, int index) {
         return ListTile(
+          onTap: () => Modular.to.pushNamed('/player',
+              arguments:
+                  'https://m.media-amazon.com/images/I/81t2jV1C9-L._SX425_.jpg'),
           leading: Image.network(
               'https://m.media-amazon.com/images/I/81t2jV1C9-L._SX425_.jpg'),
           title: Text(

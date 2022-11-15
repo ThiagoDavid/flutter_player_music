@@ -5,7 +5,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Slidy',
+      title: 'Music Player Music',
       theme: ThemeData.dark(),
       routerDelegate: Modular.routerDelegate,
       routeInformationParser: Modular.routeInformationParser,
