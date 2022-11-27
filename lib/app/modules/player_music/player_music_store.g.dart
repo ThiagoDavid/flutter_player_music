@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'playerMusic_store.dart';
+part of 'player_music_store.dart';
 
 // **************************************************************************
 // StoreGenerator

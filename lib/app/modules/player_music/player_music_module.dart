@@ -1,5 +1,5 @@
-import 'package:flutter_player_music/app/modules/player_music/playerMusic_page.dart';
-import 'package:flutter_player_music/app/modules/player_music/playerMusic_store.dart';
+import 'package:flutter_player_music/app/modules/player_music/player_music_page.dart';
+import 'package:flutter_player_music/app/modules/player_music/player_music_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class PlayerMusicModule extends Module {
