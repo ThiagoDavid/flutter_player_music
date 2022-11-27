@@ -13,13 +13,13 @@ mixin _$HomeController on HomeControllerBase, Store {
       Atom(name: 'HomeControllerBase.bandsFuture', context: context);
 
   @override
-  ObservableFuture<List<BandModel>> get bandsFuture {
+  List<BandModel> get bandsFuture {
     _$bandsFutureAtom.reportRead();
     return super.bandsFuture;
   }
 
   @override
-  set bandsFuture(ObservableFuture<List<BandModel>> value) {
+  set bandsFuture(List<BandModel> value) {
     _$bandsFutureAtom.reportWrite(value, super.bandsFuture, () {
       super.bandsFuture = value;
     });

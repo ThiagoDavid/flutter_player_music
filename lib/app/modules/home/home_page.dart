@@ -34,25 +34,7 @@ class _HomePageState extends State<HomePage> {
       //----------------------------
       // CONSTRUÇÃO DA LISTA DA BANDA
       //---------------------------
-      body: FutureBuilder<List<BandModel>>(
-        future: controller.bandsFuture,
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.waiting:
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            case ConnectionState.done:
-              if (snapshot.hasData) {
-                return _makeListBands(snapshot.data);
-              } else {
-                return Container();
-              }
-            default:
-              return Container();
-          }
-        },
-      ),
+      body: _makeListBands(controller.bandsFuture),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //store.increment();

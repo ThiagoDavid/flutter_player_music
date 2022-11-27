@@ -7,9 +7,9 @@ import 'home_page.dart';
 
 class HomeModule extends Module {
   @override
-  final List<Bind> getbinds = [
-    Bind((i) => HomeController(i.get<BandRepository>())),
-  ];
+  List<Bind> get binds => [
+        Bind((i) => HomeController(i.get<BandRepository>())),
+      ];
 
   @override
   final List<ModularRoute> routes = [

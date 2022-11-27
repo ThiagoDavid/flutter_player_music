@@ -18,11 +18,11 @@ abstract class HomeControllerBase with Store {
   );
 
   @observable
-  late ObservableFuture<List<BandModel>> bandsFuture;
+  late List<BandModel> bandsFuture = bandRepository.findAllBands();
 
   @action
   void findAll() {
-    bandsFuture = ObservableFuture(bandRepository.findAllBands());
+    bandsFuture = bandRepository.findAllBands();
   }
 
   @override
