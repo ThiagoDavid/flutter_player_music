@@ -1,11 +1,13 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_player_music/app/models/band_model.dart';
+import 'package:flutter_player_music/app/models/music_model.dart';
 import 'package:flutter_player_music/app/modules/player_music/player_music_store.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PlayerMusicPage extends StatefulWidget {
-  final String url;
-  const PlayerMusicPage({Key? key, this.url = '-'}) : super(key: key);
+  final BandModel band;
+  const PlayerMusicPage({Key? key, required this.band}) : super(key: key);
   @override
   PlayerMusicPageState createState() => PlayerMusicPageState();
 }
@@ -17,13 +19,13 @@ class PlayerMusicPageState extends State<PlayerMusicPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tocando Musica ${widget.url}"),
+        title: Text("Tocando Musica de ${widget.band.nome}"),
         backgroundColor: Colors.black,
       ),
       body: Column(
         children: <Widget>[
           buildImageHeader(context),
-          buildNameMusic(),
+          buildNameMusic(widget.band.musicas[0]),
           buildProgressBar(),
           buildButtons()
         ],
@@ -39,9 +41,8 @@ class PlayerMusicPageState extends State<PlayerMusicPage> {
         width: MediaQuery.of(context).size.width,
         height: 350,
         decoration: BoxDecoration(
-            color: Colors.amber,
             image: DecorationImage(
-                image: NetworkImage(widget.url), fit: BoxFit.cover),
+                image: NetworkImage(widget.band.imagem), fit: BoxFit.scaleDown),
             borderRadius: BorderRadius.circular(2),
             boxShadow: [
               BoxShadow(
@@ -53,19 +54,19 @@ class PlayerMusicPageState extends State<PlayerMusicPage> {
     );
   }
 
-  buildNameMusic() {
+  buildNameMusic(MusicModel musica) {
     return Column(
       children: <Widget>[
         Container(
           child: Text(
-            'Until The Whole World Hears',
+            musica.nome,
             style: GoogleFonts.ptSansCaption(
                 fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
         Container(
           child: Text(
-            'Casting Crowns',
+            widget.band.nome,
             style: GoogleFonts.ptSansCaption(
                 fontSize: 14, fontWeight: FontWeight.bold),
           ),

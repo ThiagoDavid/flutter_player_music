@@ -10,6 +10,6 @@ class PlayerMusicModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => PlayerMusicPage(url: args.data)),
+    ChildRoute('/', child: (_, args) => PlayerMusicPage(band: args.data)),
   ];
 }

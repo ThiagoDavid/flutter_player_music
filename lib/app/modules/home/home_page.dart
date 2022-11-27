@@ -35,31 +35,26 @@ class _HomePageState extends State<HomePage> {
       // CONSTRUÇÃO DA LISTA DA BANDA
       //---------------------------
       body: _makeListBands(controller.bandsFuture),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //store.increment();
-        },
-        child: Icon(Icons.add),
-      ),
     );
   }
 
 //Criação da lista de Bandas
   ListView _makeListBands(List<BandModel>? data) {
-    return ListView.builder(itemBuilder: (_, int index) {
-      return ListTile(
-        onTap: () => Modular.to.pushNamed('/player',
-            arguments:
-                'https://m.media-amazon.com/images/I/81t2jV1C9-L._SX425_.jpg'),
-        leading: Image.network(
-            'https://m.media-amazon.com/images/I/81t2jV1C9-L._SX425_.jpg'),
-        title: Text(
-          'Casting Crowns',
-          style: GoogleFonts.notoSans(),
-        ),
-        subtitle: Text('Until The Whole World Hears'),
-        contentPadding: EdgeInsets.all(10),
-      );
-    });
+    var dados = data ?? [];
+    return ListView.builder(
+        itemCount: data?.length ?? 0,
+        itemBuilder: (_, int index) {
+          var band = dados[index];
+          return ListTile(
+            onTap: () => Modular.to.pushNamed('/player', arguments: band),
+            leading: Image.network(band.imagem),
+            title: Text(
+              band.nome,
+              style: GoogleFonts.notoSans(),
+            ),
+            subtitle: Text(band.categoria),
+            contentPadding: EdgeInsets.all(10),
+          );
+        });
   }
 }
