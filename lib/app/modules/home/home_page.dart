@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_player_music/app/models/band_model.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "399740189546",
+    "project_id": "musicplayer1-1a13b",
+    "storage_bucket": "musicplayer1-1a13b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399740189546:android:3a922358356edce588c313",
+        "android_client_info": {
+          "package_name": "com.example.do_zero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399740189546-415edpqcsgubeev22126jmerhsk4c0mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT8GCKl3RX_Eo0pkDqyk1XZuyZAm87Cu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399740189546-415edpqcsgubeev22126jmerhsk4c0mb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399740189546-t3evkj6r4sug6ia4h6p9tcsuiijv4i59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.doZero"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399740189546:android:e84f3d55ee29cfd988c313",
+        "android_client_info": {
+          "package_name": "com.example.flutter_player_music"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399740189546-415edpqcsgubeev22126jmerhsk4c0mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT8GCKl3RX_Eo0pkDqyk1XZuyZAm87Cu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399740189546-415edpqcsgubeev22126jmerhsk4c0mb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399740189546-t3evkj6r4sug6ia4h6p9tcsuiijv4i59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.doZero"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
